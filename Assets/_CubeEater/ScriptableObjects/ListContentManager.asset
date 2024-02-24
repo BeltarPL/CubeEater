@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cfc96727262fd41911f03b5d8abe29, type: 3}
+  m_Name: ListContentManager
+  m_EditorClassIdentifier: 
+  listContent:
+  - name: Red Cube
+    listElementPrefab: {fileID: 2963399723804287213, guid: 92993d7eb85ba824683b6a46f601fc33,
+      type: 3}
+    sceneElementPrefab: {fileID: 0}
+  - name: Green Cube
+    listElementPrefab: {fileID: 2963399723804287213, guid: 618c576bccfbd374e9f2abe0f5bbb51c,
+      type: 3}
+    sceneElementPrefab: {fileID: 0}
+  - name: Blue Cube
+    listElementPrefab: {fileID: 2963399723804287213, guid: 9f69a527240ddf24fa6d07e0601d0502,
+      type: 3}
+    sceneElementPrefab: {fileID: 0}
+  - name: Cube Eater
+    listElementPrefab: {fileID: 2963399723804287213, guid: ccd5436d5b5f541438b4d7e42166449c,
+      type: 3}
+    sceneElementPrefab: {fileID: 0}
