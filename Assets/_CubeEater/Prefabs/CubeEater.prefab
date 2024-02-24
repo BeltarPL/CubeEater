@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6977276003953733668}
   - component: {fileID: 757966018288818114}
   - component: {fileID: 757966018288818115}
-  m_Layer: 0
+  - component: {fileID: -3582234736001598473}
+  m_Layer: 2
   m_Name: CubeEater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,6 +116,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3582234736001598473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4890085091596039522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83598f86bee4a854eb3276d20b4daa23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfaceManager: {fileID: 0}
+  keepKinematic: 1
+  rb: {fileID: 757966018288818115}
+  objCollider: {fileID: 757966018288818114}
 --- !u!1 &6698370769413959559
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +143,7 @@ GameObject:
   - component: {fileID: 6698370769413959558}
   - component: {fileID: 6698370769413959556}
   - component: {fileID: 6698370769413959557}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +227,7 @@ GameObject:
   - component: {fileID: 6698370770247324100}
   - component: {fileID: 6698370770247324122}
   - component: {fileID: 6698370770247324123}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EyeInside
   m_TagString: Untagged
   m_Icon: {fileID: 0}

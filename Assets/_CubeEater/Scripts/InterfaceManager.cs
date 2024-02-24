@@ -18,14 +18,6 @@ public class InterfaceManager : MonoBehaviour
     {
         CreateList();
     }
-    
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SlideInPanel();
-        }
-    }
 
     private void CreateList()
     {
@@ -43,7 +35,7 @@ public class InterfaceManager : MonoBehaviour
     {
         SlideOutPanel();
         
-        Instantiate(element);
+        Instantiate(element, Vector3.up * 10, Quaternion.identity).GetComponent<ObjectControls>().interfaceManager = this;
     }
     
     public void FilterList()
@@ -64,7 +56,7 @@ public class InterfaceManager : MonoBehaviour
         panel.DOAnchorPosX(-panel.rect.width * panel.localScale.x, duration, true).SetId("SlideOutPanel");
     }
     
-    private void SlideInPanel()
+    public void SlideInPanel()
     {
         float duration = Mathf.Abs(panel.anchoredPosition.x / (panel.rect.width * panel.localScale.x)) * 0.5f;
         

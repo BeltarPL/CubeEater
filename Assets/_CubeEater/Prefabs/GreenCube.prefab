@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1800645090335826053}
   - component: {fileID: 2141696746773351371}
   - component: {fileID: 8263463985071540066}
-  m_Layer: 0
+  - component: {fileID: 1593217727413038291}
+  m_Layer: 2
   m_Name: GreenCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,3 +115,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1593217727413038291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4320215239598777795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83598f86bee4a854eb3276d20b4daa23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfaceManager: {fileID: 0}
+  keepKinematic: 0
+  rb: {fileID: 8263463985071540066}
+  objCollider: {fileID: 2141696746773351371}

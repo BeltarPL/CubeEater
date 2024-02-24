@@ -16,16 +16,20 @@ MonoBehaviour:
   - name: Red Cube
     listElementPrefab: {fileID: 2963399723804287213, guid: 92993d7eb85ba824683b6a46f601fc33,
       type: 3}
-    sceneElementPrefab: {fileID: 0}
+    sceneElementPrefab: {fileID: 1908589693002085641, guid: 80e4250158d6dc64aa97371363beac2f,
+      type: 3}
   - name: Green Cube
     listElementPrefab: {fileID: 2963399723804287213, guid: 618c576bccfbd374e9f2abe0f5bbb51c,
       type: 3}
-    sceneElementPrefab: {fileID: 0}
+    sceneElementPrefab: {fileID: 7833257215661887884, guid: edbf64c619413f14898722107de543d4,
+      type: 3}
   - name: Blue Cube
     listElementPrefab: {fileID: 2963399723804287213, guid: 9f69a527240ddf24fa6d07e0601d0502,
       type: 3}
-    sceneElementPrefab: {fileID: 0}
+    sceneElementPrefab: {fileID: 9158623336115513510, guid: fbb4098cc864bc144b6c8f05a900f14c,
+      type: 3}
   - name: Cube Eater
     listElementPrefab: {fileID: 2963399723804287213, guid: ccd5436d5b5f541438b4d7e42166449c,
       type: 3}
-    sceneElementPrefab: {fileID: 0}
+    sceneElementPrefab: {fileID: 1485131568451846445, guid: 66983796b113a324f82ad229fabc6226,
+      type: 3}
