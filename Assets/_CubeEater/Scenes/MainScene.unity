@@ -692,6 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listContentManager: {fileID: 11400000, guid: 50f0f3d58c6de2043a061a4dd3e6b50d, type: 2}
+  panel: {fileID: 1424809513}
   listContentParent: {fileID: 45061487}
   filterInputField: {fileID: 116263833}
 --- !u!1 &203844586

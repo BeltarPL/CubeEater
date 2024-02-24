@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class InterfaceManager : MonoBehaviour
 {
     [SerializeField] private ListContentManager listContentManager;
+    [SerializeField] private RectTransform panel;
     [SerializeField] private Transform listContentParent;
     [SerializeField] private TMP_InputField filterInputField;
 
@@ -15,6 +17,14 @@ public class InterfaceManager : MonoBehaviour
     private void Start()
     {
         CreateList();
+    }
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SlideInPanel();
+        }
     }
 
     private void CreateList()
@@ -31,6 +41,8 @@ public class InterfaceManager : MonoBehaviour
 
     private void InstantiateSceneElement(Transform element)
     {
+        SlideOutPanel();
+        
         Instantiate(element);
     }
     
@@ -42,5 +54,21 @@ public class InterfaceManager : MonoBehaviour
         {
             element.gameObject.SetActive(element.name.Contains(filter));
         }
+    }
+    
+    private void SlideOutPanel()
+    {
+        float duration = (1 - Mathf.Abs(panel.anchoredPosition.x / (panel.rect.width * panel.localScale.x))) * 0.5f;
+        
+        DOTween.Kill("SlideInPanel");
+        panel.DOAnchorPosX(-panel.rect.width * panel.localScale.x, duration, true).SetId("SlideOutPanel");
+    }
+    
+    private void SlideInPanel()
+    {
+        float duration = Mathf.Abs(panel.anchoredPosition.x / (panel.rect.width * panel.localScale.x)) * 0.5f;
+        
+        DOTween.Kill("SlideOutPanel");
+        panel.DOAnchorPosX(0, duration, true).SetId("SlideInPanel");;
     }
 }
