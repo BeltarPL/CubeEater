@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -25,16 +24,18 @@ public class InterfaceManager : MonoBehaviour
         {
             Transform newElement = Instantiate(element.listElementPrefab, listContentParent);
             newElement.name = element.name.ToLower();
-            newElement.GetComponent<Button>().onClick.AddListener(() => InstantiateSceneElement(element.sceneElementPrefab));
+            newElement.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                InstantiateSceneElement(element.sceneElementPrefab);
+                SlideOutPanel();
+            });
             
             listContent.Add(newElement);
         }
     }
-
+    
     private void InstantiateSceneElement(Transform element)
     {
-        SlideOutPanel();
-        
         Instantiate(element, Vector3.up * 10, Quaternion.identity).GetComponent<ObjectControls>().interfaceManager = this;
     }
     
@@ -47,7 +48,7 @@ public class InterfaceManager : MonoBehaviour
             element.gameObject.SetActive(element.name.Contains(filter));
         }
     }
-    
+
     private void SlideOutPanel()
     {
         float duration = (1 - Mathf.Abs(panel.anchoredPosition.x / (panel.rect.width * panel.localScale.x))) * 0.5f;

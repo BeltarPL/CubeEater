@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 757966018288818114}
   - component: {fileID: 757966018288818115}
   - component: {fileID: -3582234736001598473}
+  - component: {fileID: 6213019302006737042}
   m_Layer: 2
   m_Name: CubeEater
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 6698370769413959558}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2209152920329398214
 MeshFilter:
@@ -114,7 +115,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &-3582234736001598473
 MonoBehaviour:
@@ -129,9 +130,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceManager: {fileID: 0}
-  keepKinematic: 1
+  isCubeEater: 1
   rb: {fileID: 757966018288818115}
   objCollider: {fileID: 757966018288818114}
+--- !u!114 &6213019302006737042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4890085091596039522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3599521bc43e74587de49671c61ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaced: 0
+  target: {fileID: 0}
+  moveSpeed: 5
+  rotationSpeed: 100
+  rb: {fileID: 757966018288818115}
 --- !u!1 &6698370769413959559
 GameObject:
   m_ObjectHideFlags: 0
